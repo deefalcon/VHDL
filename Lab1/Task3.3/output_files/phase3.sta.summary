@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -2.502
+TNS   : -37.946
+
+Type  : Slow Model Setup 'count50[25]'
+Slack : -0.083
+TNS   : -0.083
+
+Type  : Slow Model Setup 'state_machine:u0|current_state[0]'
+Slack : 0.679
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.121
+TNS   : -2.121
+
+Type  : Slow Model Hold 'state_machine:u0|current_state[0]'
+Slack : -1.892
+TNS   : -9.326
+
+Type  : Slow Model Hold 'count50[25]'
+Slack : -0.867
+TNS   : -1.688
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -27.380
+
+Type  : Slow Model Minimum Pulse Width 'count50[25]'
+Slack : -0.500
+TNS   : -3.000
+
+Type  : Slow Model Minimum Pulse Width 'state_machine:u0|current_state[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.679
+TNS   : -5.875
+
+Type  : Fast Model Setup 'count50[25]'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Fast Model Setup 'state_machine:u0|current_state[0]'
+Slack : 1.061
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.451
+TNS   : -1.451
+
+Type  : Fast Model Hold 'state_machine:u0|current_state[0]'
+Slack : -1.150
+TNS   : -5.676
+
+Type  : Fast Model Hold 'count50[25]'
+Slack : -0.476
+TNS   : -1.062
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -27.380
+
+Type  : Fast Model Minimum Pulse Width 'count50[25]'
+Slack : -0.500
+TNS   : -3.000
+
+Type  : Fast Model Minimum Pulse Width 'state_machine:u0|current_state[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task1.2
+Estate_machine
+Z0 w1452220230
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.2
+Z4 8C:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.1\state_machine.vhd
+Z5 FC:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.1\state_machine.vhd
+l0
+L26
+VeImUziX1T]D[b>hd[CUPB2
+!s100 zJ;=TPgfJa0jFCMe[UCh93
+Z6 OV;C;10.1d;51
+33
+!i10b 1
+Z7 !s108 1452220236.046000
+Z8 !s90 -reportprogress|300|-work|work|-2008|-explicit|C:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.1\state_machine.vhd|
+Z9 !s107 C:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.1\state_machine.vhd|
+Z10 o-work work -2008 -explicit -O0
+Z11 tExplicit 1
+Abehavioural
+R1
+R2
+Z12 DEx4 work 13 state_machine 0 22 eImUziX1T]D[b>hd[CUPB2
+l48
+L46
+VgP6nB>nY]K69oY7OC;0P`2
+!s100 ?NbaYaLn4JGB0MnLm:o670
+R6
+33
+!i10b 1
+R7
+R8
+R9
+R10
+R11
+Estate_machine_tb
+Z13 w1452219204
+R1
+R2
+R3
+Z14 8C:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.2\state_machine_tb.vhd
+Z15 FC:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.2\state_machine_tb.vhd
+l0
+L19
+VoRH9O:4Dd^<`Xl2XZ6edi2
+R6
+33
+Z16 !s108 1452219269.288000
+Z17 !s90 -reportprogress|300|-work|work|-2008|-explicit|C:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.2\state_machine_tb.vhd|
+Z18 !s107 C:\Users\Maxim\Documents\GitHub\VHDL\Lab1\Task3.2\state_machine_tb.vhd|
+R10
+R11
+!s100 dkA1j]Gz>VBFk9bimJIPV0
+!i10b 1
+Artl
+R1
+R2
+DEx4 work 16 state_machine_tb 0 22 oRH9O:4Dd^<`Xl2XZ6edi2
+l48
+L26
+VKBU6OdZ7<]I=72:V>Tz9i1
+R6
+33
+R16
+R17
+R18
+R10
+R11
+!s100 cA`f4QWUfc<V0F2]K]UYI1
+!i10b 1
