@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity LED_blanker is
+  port (hex1: out std_logic_vector(6 downto 0);
+      hex2: out std_logic_vector(6 downto 0);
+      hex3: out std_logic_vector(6 downto 0);
+      hex4: out std_logic_vector(6 downto 0);
+      hex5: out std_logic_vector(6 downto 0);
+      hex6: out std_logic_vector(6 downto 0);
+      hex7: out std_logic_vector(6 downto 0));
+      
+architecture behavioural of LED_blanker is
+begin
+  
+    hex1 <= "1111111"; 
+    hex2 <= "1111111"; 
+    hex3 <= "1111111"; 
+    hex4 <= "1111111"; 
+    hex5 <= "1111111"; 
+    hex6 <= "1111111"; 
+    hex7 <= "1111111"; 
+    
+end behavioural

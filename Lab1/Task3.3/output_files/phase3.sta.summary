@@ -2,76 +2,148 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Setup 'count50[18]'
+Slack : -2.366
+TNS   : -23.033
+
+Type  : Slow Model Setup 'count27[18]'
+Slack : -2.358
+TNS   : -22.747
+
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : -2.502
-TNS   : -37.946
+Slack : -1.828
+TNS   : -19.446
 
-Type  : Slow Model Setup 'count50[25]'
-Slack : -0.083
-TNS   : -0.083
+Type  : Slow Model Setup 'CLOCK_27'
+Slack : -1.824
+TNS   : -19.410
 
-Type  : Slow Model Setup 'state_machine:u0|current_state[0]'
-Slack : 0.679
-TNS   : 0.000
+Type  : Slow Model Setup 'counter_8bit:u8|q_internal'
+Slack : -0.038
+TNS   : -0.041
+
+Type  : Slow Model Setup 'counter_8bit:u9|q_internal'
+Slack : -0.036
+TNS   : -0.070
+
+Type  : Slow Model Hold 'count50[18]'
+Slack : -2.225
+TNS   : -2.225
 
 Type  : Slow Model Hold 'CLOCK_50'
-Slack : -2.121
-TNS   : -2.121
+Slack : -2.119
+TNS   : -2.119
 
-Type  : Slow Model Hold 'state_machine:u0|current_state[0]'
-Slack : -1.892
-TNS   : -9.326
+Type  : Slow Model Hold 'CLOCK_27'
+Slack : -2.079
+TNS   : -2.079
 
-Type  : Slow Model Hold 'count50[25]'
-Slack : -0.867
-TNS   : -1.688
+Type  : Slow Model Hold 'count27[18]'
+Slack : -2.071
+TNS   : -2.071
+
+Type  : Slow Model Hold 'counter_8bit:u8|q_internal'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'counter_8bit:u9|q_internal'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_27'
+Slack : -1.380
+TNS   : -20.380
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
-TNS   : -27.380
+TNS   : -20.380
 
-Type  : Slow Model Minimum Pulse Width 'count50[25]'
+Type  : Slow Model Minimum Pulse Width 'count27[18]'
+Slack : -0.500
+TNS   : -10.000
+
+Type  : Slow Model Minimum Pulse Width 'count50[18]'
+Slack : -0.500
+TNS   : -10.000
+
+Type  : Slow Model Minimum Pulse Width 'counter_8bit:u8|q_internal'
 Slack : -0.500
 TNS   : -3.000
 
-Type  : Slow Model Minimum Pulse Width 'state_machine:u0|current_state[0]'
-Slack : 0.500
-TNS   : 0.000
+Type  : Slow Model Minimum Pulse Width 'counter_8bit:u9|q_internal'
+Slack : -0.500
+TNS   : -3.000
+
+Type  : Fast Model Setup 'count27[18]'
+Slack : -0.562
+TNS   : -5.198
+
+Type  : Fast Model Setup 'count50[18]'
+Slack : -0.557
+TNS   : -5.218
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : -0.679
-TNS   : -5.875
+Slack : -0.352
+TNS   : -1.436
 
-Type  : Fast Model Setup 'count50[25]'
-Slack : 0.485
+Type  : Fast Model Setup 'CLOCK_27'
+Slack : -0.348
+TNS   : -1.400
+
+Type  : Fast Model Setup 'counter_8bit:u8|q_internal'
+Slack : 0.514
 TNS   : 0.000
 
-Type  : Fast Model Setup 'state_machine:u0|current_state[0]'
-Slack : 1.061
+Type  : Fast Model Setup 'counter_8bit:u9|q_internal'
+Slack : 0.514
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
-Slack : -1.451
-TNS   : -1.451
+Slack : -1.444
+TNS   : -1.444
 
-Type  : Fast Model Hold 'state_machine:u0|current_state[0]'
-Slack : -1.150
-TNS   : -5.676
+Type  : Fast Model Hold 'CLOCK_27'
+Slack : -1.411
+TNS   : -1.411
 
-Type  : Fast Model Hold 'count50[25]'
-Slack : -0.476
-TNS   : -1.062
+Type  : Fast Model Hold 'count50[18]'
+Slack : -1.369
+TNS   : -1.369
+
+Type  : Fast Model Hold 'count27[18]'
+Slack : -1.306
+TNS   : -1.306
+
+Type  : Fast Model Hold 'counter_8bit:u8|q_internal'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'counter_8bit:u9|q_internal'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_27'
+Slack : -1.380
+TNS   : -20.380
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
-TNS   : -27.380
+TNS   : -20.380
 
-Type  : Fast Model Minimum Pulse Width 'count50[25]'
+Type  : Fast Model Minimum Pulse Width 'count27[18]'
+Slack : -0.500
+TNS   : -10.000
+
+Type  : Fast Model Minimum Pulse Width 'count50[18]'
+Slack : -0.500
+TNS   : -10.000
+
+Type  : Fast Model Minimum Pulse Width 'counter_8bit:u8|q_internal'
 Slack : -0.500
 TNS   : -3.000
 
-Type  : Fast Model Minimum Pulse Width 'state_machine:u0|current_state[0]'
-Slack : 0.500
-TNS   : 0.000
+Type  : Fast Model Minimum Pulse Width 'counter_8bit:u9|q_internal'
+Slack : -0.500
+TNS   : -3.000
 
 ------------------------------------------------------------

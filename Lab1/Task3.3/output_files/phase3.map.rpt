@@ -1,5 +1,5 @@
 Analysis & Synthesis report for phase3
-Thu Jan 07 18:59:32 2016
+Wed Jan 13 23:34:18 2016
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -13,10 +13,9 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +41,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 07 18:59:32 2016      ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 13 23:34:18 2016      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; phase3                                     ;
 ; Top-level Entity Name              ; phase3                                     ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; 39                                         ;
-;     Total combinational functions  ; 39                                         ;
-;     Dedicated logic registers      ; 29                                         ;
-; Total registers                    ; 29                                         ;
-; Total pins                         ; 30                                         ;
+; Total logic elements               ; 94                                         ;
+;     Total combinational functions  ; 94                                         ;
+;     Dedicated logic registers      ; 64                                         ;
+; Total registers                    ; 64                                         ;
+; Total pins                         ; 80                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -161,8 +160,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; ../Task3.1/LED_blanker.vhd       ; yes             ; User VHDL File  ; C:/Users/Maxim/Documents/GitHub/VHDL/Lab1/Task3.1/LED_blanker.vhd   ;         ;
 ; phase3.vhd                       ; yes             ; User VHDL File  ; C:/Users/Maxim/Documents/GitHub/VHDL/Lab1/Task3.3/phase3.vhd        ;         ;
 ; ../Task3.1/state_machine.vhd     ; yes             ; User VHDL File  ; C:/Users/Maxim/Documents/GitHub/VHDL/Lab1/Task3.1/state_machine.vhd ;         ;
+; ../Task4.1/counter_8bit.vhd      ; yes             ; User VHDL File  ; C:/Users/Maxim/Documents/GitHub/VHDL/Lab1/Task4.1/counter_8bit.vhd  ;         ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
 
 
@@ -171,28 +172,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 39       ;
+; Estimated Total logic elements              ; 94       ;
 ;                                             ;          ;
-; Total combinational functions               ; 39       ;
+; Total combinational functions               ; 94       ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 3        ;
-;     -- 3 input functions                    ; 8        ;
-;     -- <=2 input functions                  ; 28       ;
+;     -- 4 input functions                    ; 6        ;
+;     -- 3 input functions                    ; 28       ;
+;     -- <=2 input functions                  ; 60       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 15       ;
-;     -- arithmetic mode                      ; 24       ;
+;     -- normal mode                          ; 30       ;
+;     -- arithmetic mode                      ; 64       ;
 ;                                             ;          ;
-; Total registers                             ; 29       ;
-;     -- Dedicated logic registers            ; 29       ;
+; Total registers                             ; 64       ;
+;     -- Dedicated logic registers            ; 64       ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 30       ;
+; I/O pins                                    ; 80       ;
 ; Embedded Multiplier 9-bit elements          ; 0        ;
-; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 26       ;
-; Total fan-out                               ; 154      ;
-; Average fan-out                             ; 1.57     ;
+; Maximum fan-out node                        ; CLOCK_27 ;
+; Maximum fan-out                             ; 19       ;
+; Total fan-out                               ; 388      ;
+; Average fan-out                             ; 1.63     ;
 +---------------------------------------------+----------+
 
 
@@ -201,26 +202,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; |phase3                    ; 39 (26)           ; 29 (26)      ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |phase3                  ;              ;
-;    |state_machine:u0|      ; 13 (13)           ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase3|state_machine:u0 ;              ;
+; |phase3                    ; 94 (38)           ; 64 (38)      ; 0           ; 0            ; 0       ; 0         ; 80   ; 0            ; |phase3                  ;              ;
+;    |counter_8bit:u8|       ; 19 (19)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase3|counter_8bit:u8  ;              ;
+;    |counter_8bit:u9|       ; 19 (19)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase3|counter_8bit:u9  ;              ;
+;    |state_machine:u0|      ; 9 (9)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase3|state_machine:u0 ;              ;
+;    |state_machine:u1|      ; 9 (9)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase3|state_machine:u1 ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                 ;
-+----------------------------------------------------+-----------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal   ; Free of Timing Hazards ;
-+----------------------------------------------------+-----------------------+------------------------+
-; state_machine:u0|hex0[0]                           ; state_machine:u0|Mux9 ; yes                    ;
-; state_machine:u0|hex0[1]                           ; state_machine:u0|Mux9 ; yes                    ;
-; state_machine:u0|hex0[2]                           ; state_machine:u0|Mux9 ; yes                    ;
-; state_machine:u0|hex0[3]                           ; state_machine:u0|Mux9 ; yes                    ;
-; state_machine:u0|hex0[4]                           ; state_machine:u0|Mux9 ; yes                    ;
-; state_machine:u0|hex0[6]                           ; state_machine:u0|Mux9 ; yes                    ;
-; Number of user-specified and inferred latches = 6  ;                       ;                        ;
-+----------------------------------------------------+-----------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -228,10 +216,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 18    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -243,7 +231,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -253,70 +241,82 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Jan 07 18:59:27 2016
+    Info: Processing started: Wed Jan 13 23:34:13 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off phase3 -c phase3
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxim/documents/github/vhdl/lab1/task3.1/led_blanker.vhd
+    Info (12022): Found design unit 1: LED_blanker-behavioural
+    Info (12023): Found entity 1: LED_blanker
 Info (12021): Found 2 design units, including 1 entities, in source file phase3.vhd
     Info (12022): Found design unit 1: phase3-structural
     Info (12023): Found entity 1: phase3
 Info (12021): Found 2 design units, including 1 entities, in source file /users/maxim/documents/github/vhdl/lab1/task3.1/state_machine.vhd
     Info (12022): Found design unit 1: state_machine-behavioural
     Info (12023): Found entity 1: state_machine
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxim/documents/github/vhdl/lab1/task4.1/counter_8bit.vhd
+    Info (12022): Found design unit 1: counter_8bit-behavioural
+    Info (12023): Found entity 1: counter_8bit
 Info (12127): Elaborating entity "phase3" for the top level hierarchy
+Info (12128): Elaborating entity "counter_8bit" for hierarchy "counter_8bit:u8"
+Warning (10492): VHDL Process Statement warning at counter_8bit.vhd(44): signal "q_internal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:u0"
-Warning (10631): VHDL Process Statement warning at state_machine.vhd(100): inferring latch(es) for signal or variable "hex0", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "hex0[0]" at state_machine.vhd(100)
-Info (10041): Inferred latch for "hex0[1]" at state_machine.vhd(100)
-Info (10041): Inferred latch for "hex0[2]" at state_machine.vhd(100)
-Info (10041): Inferred latch for "hex0[3]" at state_machine.vhd(100)
-Info (10041): Inferred latch for "hex0[4]" at state_machine.vhd(100)
-Info (10041): Inferred latch for "hex0[5]" at state_machine.vhd(100)
-Info (10041): Inferred latch for "hex0[6]" at state_machine.vhd(100)
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "state_machine:u0|hex0[6]" merged with LATCH primitive "state_machine:u0|hex0[2]"
-Warning (13012): Latch state_machine:u0|hex0[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state_machine:u0|current_state[0]
-Warning (13012): Latch state_machine:u0|hex0[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state_machine:u0|current_state[0]
-Warning (13012): Latch state_machine:u0|hex0[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state_machine:u0|current_state[0]
-Warning (13012): Latch state_machine:u0|hex0[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state_machine:u0|current_state[0]
-Warning (13012): Latch state_machine:u0|hex0[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state_machine:u0|current_state[0]
+Info (12128): Elaborating entity "LED_blanker" for hierarchy "LED_blanker:u2"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC
+    Warning (13410): Pin "HEX6[3]" is stuck at VCC
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 21 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]"
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-    Warning (15610): No output dependent on input pin "SW[1]"
-    Warning (15610): No output dependent on input pin "SW[2]"
-    Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "SW[4]"
-    Warning (15610): No output dependent on input pin "SW[5]"
-    Warning (15610): No output dependent on input pin "SW[6]"
-    Warning (15610): No output dependent on input pin "SW[7]"
-    Warning (15610): No output dependent on input pin "SW[8]"
-    Warning (15610): No output dependent on input pin "SW[9]"
-    Warning (15610): No output dependent on input pin "SW[10]"
-    Warning (15610): No output dependent on input pin "SW[11]"
-    Warning (15610): No output dependent on input pin "SW[12]"
-    Warning (15610): No output dependent on input pin "SW[13]"
-    Warning (15610): No output dependent on input pin "SW[14]"
-    Warning (15610): No output dependent on input pin "SW[15]"
-    Warning (15610): No output dependent on input pin "SW[16]"
-    Warning (15610): No output dependent on input pin "SW[17]"
-Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 23 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 497 megabytes
-    Info: Processing ended: Thu Jan 07 18:59:32 2016
+Info (21057): Implemented 174 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 24 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 94 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 486 megabytes
+    Info: Processing ended: Wed Jan 13 23:34:18 2016
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 

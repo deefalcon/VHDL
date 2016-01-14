@@ -1,26 +1,46 @@
 |phase3
 KEY[0] => state_machine:u0.resetb
+KEY[0] => state_machine:u1.resetb
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
-SW[0] => state_machine:u0.skip
-SW[1] => ~NO_FANOUT~
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => ~NO_FANOUT~
-SW[10] => ~NO_FANOUT~
-SW[11] => ~NO_FANOUT~
-SW[12] => ~NO_FANOUT~
-SW[13] => ~NO_FANOUT~
-SW[14] => ~NO_FANOUT~
-SW[15] => ~NO_FANOUT~
-SW[16] => ~NO_FANOUT~
-SW[17] => ~NO_FANOUT~
+SW[0] => state_machine:u1.skip
+SW[1] => state_machine:u0.skip
+SW[2] => counter_8bit:u9.count_target[0]
+SW[3] => counter_8bit:u9.count_target[1]
+SW[4] => counter_8bit:u9.count_target[2]
+SW[5] => counter_8bit:u9.count_target[3]
+SW[6] => counter_8bit:u9.count_target[4]
+SW[7] => counter_8bit:u9.count_target[5]
+SW[8] => counter_8bit:u9.count_target[6]
+SW[9] => counter_8bit:u9.count_target[7]
+SW[10] => counter_8bit:u8.count_target[0]
+SW[11] => counter_8bit:u8.count_target[1]
+SW[12] => counter_8bit:u8.count_target[2]
+SW[13] => counter_8bit:u8.count_target[3]
+SW[14] => counter_8bit:u8.count_target[4]
+SW[15] => counter_8bit:u8.count_target[5]
+SW[16] => counter_8bit:u8.count_target[6]
+SW[17] => counter_8bit:u8.count_target[7]
+CLOCK_27 => count27[0].CLK
+CLOCK_27 => count27[1].CLK
+CLOCK_27 => count27[2].CLK
+CLOCK_27 => count27[3].CLK
+CLOCK_27 => count27[4].CLK
+CLOCK_27 => count27[5].CLK
+CLOCK_27 => count27[6].CLK
+CLOCK_27 => count27[7].CLK
+CLOCK_27 => count27[8].CLK
+CLOCK_27 => count27[9].CLK
+CLOCK_27 => count27[10].CLK
+CLOCK_27 => count27[11].CLK
+CLOCK_27 => count27[12].CLK
+CLOCK_27 => count27[13].CLK
+CLOCK_27 => count27[14].CLK
+CLOCK_27 => count27[15].CLK
+CLOCK_27 => count27[16].CLK
+CLOCK_27 => count27[17].CLK
+CLOCK_27 => count27[18].CLK
 CLOCK_50 => count50[0].CLK
 CLOCK_50 => count50[1].CLK
 CLOCK_50 => count50[2].CLK
@@ -40,41 +60,213 @@ CLOCK_50 => count50[15].CLK
 CLOCK_50 => count50[16].CLK
 CLOCK_50 => count50[17].CLK
 CLOCK_50 => count50[18].CLK
-CLOCK_50 => count50[19].CLK
-CLOCK_50 => count50[20].CLK
-CLOCK_50 => count50[21].CLK
-CLOCK_50 => count50[22].CLK
-CLOCK_50 => count50[23].CLK
-CLOCK_50 => count50[24].CLK
-CLOCK_50 => count50[25].CLK
-HEX0[0] <= state_machine:u0.hex0[0]
-HEX0[1] <= state_machine:u0.hex0[1]
-HEX0[2] <= state_machine:u0.hex0[2]
-HEX0[3] <= state_machine:u0.hex0[3]
-HEX0[4] <= state_machine:u0.hex0[4]
-HEX0[5] <= state_machine:u0.hex0[5]
-HEX0[6] <= state_machine:u0.hex0[6]
+HEX7[0] <= LED_blanker:u7.hex[0]
+HEX7[1] <= LED_blanker:u7.hex[1]
+HEX7[2] <= LED_blanker:u7.hex[2]
+HEX7[3] <= LED_blanker:u7.hex[3]
+HEX7[4] <= LED_blanker:u7.hex[4]
+HEX7[5] <= LED_blanker:u7.hex[5]
+HEX7[6] <= LED_blanker:u7.hex[6]
+HEX6[0] <= LED_blanker:u6.hex[0]
+HEX6[1] <= LED_blanker:u6.hex[1]
+HEX6[2] <= LED_blanker:u6.hex[2]
+HEX6[3] <= LED_blanker:u6.hex[3]
+HEX6[4] <= LED_blanker:u6.hex[4]
+HEX6[5] <= LED_blanker:u6.hex[5]
+HEX6[6] <= LED_blanker:u6.hex[6]
+HEX5[0] <= LED_blanker:u5.hex[0]
+HEX5[1] <= LED_blanker:u5.hex[1]
+HEX5[2] <= LED_blanker:u5.hex[2]
+HEX5[3] <= LED_blanker:u5.hex[3]
+HEX5[4] <= LED_blanker:u5.hex[4]
+HEX5[5] <= LED_blanker:u5.hex[5]
+HEX5[6] <= LED_blanker:u5.hex[6]
+HEX4[0] <= LED_blanker:u4.hex[0]
+HEX4[1] <= LED_blanker:u4.hex[1]
+HEX4[2] <= LED_blanker:u4.hex[2]
+HEX4[3] <= LED_blanker:u4.hex[3]
+HEX4[4] <= LED_blanker:u4.hex[4]
+HEX4[5] <= LED_blanker:u4.hex[5]
+HEX4[6] <= LED_blanker:u4.hex[6]
+HEX3[0] <= LED_blanker:u3.hex[0]
+HEX3[1] <= LED_blanker:u3.hex[1]
+HEX3[2] <= LED_blanker:u3.hex[2]
+HEX3[3] <= LED_blanker:u3.hex[3]
+HEX3[4] <= LED_blanker:u3.hex[4]
+HEX3[5] <= LED_blanker:u3.hex[5]
+HEX3[6] <= LED_blanker:u3.hex[6]
+HEX2[0] <= LED_blanker:u2.hex[0]
+HEX2[1] <= LED_blanker:u2.hex[1]
+HEX2[2] <= LED_blanker:u2.hex[2]
+HEX2[3] <= LED_blanker:u2.hex[3]
+HEX2[4] <= LED_blanker:u2.hex[4]
+HEX2[5] <= LED_blanker:u2.hex[5]
+HEX2[6] <= LED_blanker:u2.hex[6]
+HEX1[0] <= state_machine:u0.hex[0]
+HEX1[1] <= state_machine:u0.hex[1]
+HEX1[2] <= state_machine:u0.hex[2]
+HEX1[3] <= state_machine:u0.hex[3]
+HEX1[4] <= state_machine:u0.hex[4]
+HEX1[5] <= state_machine:u0.hex[5]
+HEX1[6] <= state_machine:u0.hex[6]
+HEX0[0] <= state_machine:u1.hex[0]
+HEX0[1] <= state_machine:u1.hex[1]
+HEX0[2] <= state_machine:u1.hex[2]
+HEX0[3] <= state_machine:u1.hex[3]
+HEX0[4] <= state_machine:u1.hex[4]
+HEX0[5] <= state_machine:u1.hex[5]
+HEX0[6] <= state_machine:u1.hex[6]
+
+
+|phase3|counter_8bit:u8
+clk => q_internal.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+count_target[0] => LessThan0.IN18
+count_target[1] => LessThan0.IN17
+count_target[2] => LessThan0.IN16
+count_target[3] => LessThan0.IN15
+count_target[4] => LessThan0.IN14
+count_target[5] => LessThan0.IN13
+count_target[6] => LessThan0.IN12
+count_target[7] => LessThan0.IN11
+q <= q_internal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|phase3|counter_8bit:u9
+clk => q_internal.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+count_target[0] => LessThan0.IN18
+count_target[1] => LessThan0.IN17
+count_target[2] => LessThan0.IN16
+count_target[3] => LessThan0.IN15
+count_target[4] => LessThan0.IN14
+count_target[5] => LessThan0.IN13
+count_target[6] => LessThan0.IN12
+count_target[7] => LessThan0.IN11
+q <= q_internal.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |phase3|state_machine:u0
 clk => current_state[0].CLK
 clk => current_state[1].CLK
 clk => current_state[2].CLK
-resetb => ~NO_FANOUT~
+resetb => current_state[0].ACLR
+resetb => current_state[1].ACLR
+resetb => current_state[2].ACLR
 skip => Mux0.IN7
 skip => Mux1.IN7
 skip => Mux2.IN6
 skip => Mux2.IN7
+skip => Mux0.IN6
+skip => Mux1.IN6
 skip => Mux2.IN4
 skip => Mux2.IN5
-skip => Mux1.IN6
+hex[0] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|phase3|state_machine:u1
+clk => current_state[0].CLK
+clk => current_state[1].CLK
+clk => current_state[2].CLK
+resetb => current_state[0].ACLR
+resetb => current_state[1].ACLR
+resetb => current_state[2].ACLR
+skip => Mux0.IN7
+skip => Mux1.IN7
+skip => Mux2.IN6
+skip => Mux2.IN7
 skip => Mux0.IN6
-hex0[0] <= hex0[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-hex0[1] <= hex0[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-hex0[2] <= hex0[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-hex0[3] <= hex0[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-hex0[4] <= hex0[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-hex0[5] <= hex0[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-hex0[6] <= hex0[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+skip => Mux1.IN6
+skip => Mux2.IN4
+skip => Mux2.IN5
+hex[0] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|phase3|LED_blanker:u2
+hex[0] <= <VCC>
+hex[1] <= <VCC>
+hex[2] <= <VCC>
+hex[3] <= <VCC>
+hex[4] <= <VCC>
+hex[5] <= <VCC>
+hex[6] <= <VCC>
+
+
+|phase3|LED_blanker:u3
+hex[0] <= <VCC>
+hex[1] <= <VCC>
+hex[2] <= <VCC>
+hex[3] <= <VCC>
+hex[4] <= <VCC>
+hex[5] <= <VCC>
+hex[6] <= <VCC>
+
+
+|phase3|LED_blanker:u4
+hex[0] <= <VCC>
+hex[1] <= <VCC>
+hex[2] <= <VCC>
+hex[3] <= <VCC>
+hex[4] <= <VCC>
+hex[5] <= <VCC>
+hex[6] <= <VCC>
+
+
+|phase3|LED_blanker:u5
+hex[0] <= <VCC>
+hex[1] <= <VCC>
+hex[2] <= <VCC>
+hex[3] <= <VCC>
+hex[4] <= <VCC>
+hex[5] <= <VCC>
+hex[6] <= <VCC>
+
+
+|phase3|LED_blanker:u6
+hex[0] <= <VCC>
+hex[1] <= <VCC>
+hex[2] <= <VCC>
+hex[3] <= <VCC>
+hex[4] <= <VCC>
+hex[5] <= <VCC>
+hex[6] <= <VCC>
+
+
+|phase3|LED_blanker:u7
+hex[0] <= <VCC>
+hex[1] <= <VCC>
+hex[2] <= <VCC>
+hex[3] <= <VCC>
+hex[4] <= <VCC>
+hex[5] <= <VCC>
+hex[6] <= <VCC>
 
 

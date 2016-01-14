@@ -42,8 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY phase3
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:37:21  JANUARY 07, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.0
-set_global_assignment -name VHDL_FILE phase3.vhd
-set_global_assignment -name VHDL_FILE ../Task3.1/state_machine.vhd
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -483,4 +481,8 @@ set_location_assignment PIN_V24 -to GPIO_1[32]
 set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
+set_global_assignment -name VHDL_FILE ../Task3.1/LED_blanker.vhd
+set_global_assignment -name VHDL_FILE phase3.vhd
+set_global_assignment -name VHDL_FILE ../Task3.1/state_machine.vhd
+set_global_assignment -name VHDL_FILE ../Task4.1/counter_8bit.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
