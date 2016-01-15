@@ -12,6 +12,6 @@ end LED_blanker;
 architecture behavioural of LED_blanker is
 begin
   
-    hex <= "1111111"; 
+    hex <= "1111111";
     
 end behavioural;
