@@ -18,7 +18,7 @@ signal next_state, current_state : std_logic_vector(2 downto 0);
 constant LETTER_S : std_logic_vector(6 downto 0) := "0010010";
 constant LETTER_A : std_logic_vector(6 downto 0) := "0001000";
 constant LETTER_C : std_logic_vector(6 downto 0) := "1000110";
-constant LETTER_H : std_logic_vector(6 downto 0) := "0001000";
+constant LETTER_H : std_logic_vector(6 downto 0) := "0001001";
 constant LETTER_BLANK : std_logic_vector(6 downto 0) := "1111111";
 begin
 

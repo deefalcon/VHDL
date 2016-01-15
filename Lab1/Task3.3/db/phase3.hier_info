@@ -3,8 +3,8 @@ KEY[0] => state_machine_duncan:u10.resetb
 KEY[0] => state_machine_duncan:u11.resetb
 KEY[0] => state_machine:u0.resetb
 KEY[0] => state_machine:u1.resetb
-KEY[1] => mux_8x2x1:u12.sel
-KEY[1] => mux_8x2x1:u13.sel
+KEY[1] => mux_7x2x1:u12.sel
+KEY[1] => mux_7x2x1:u13.sel
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
 SW[0] => state_machine_duncan:u11.skip
@@ -107,20 +107,20 @@ HEX2[3] <= LED_blanker:u2.hex[3]
 HEX2[4] <= LED_blanker:u2.hex[4]
 HEX2[5] <= LED_blanker:u2.hex[5]
 HEX2[6] <= LED_blanker:u2.hex[6]
-HEX1[0] <= mux_8x2x1:u12.output_Y[0]
-HEX1[1] <= mux_8x2x1:u12.output_Y[1]
-HEX1[2] <= mux_8x2x1:u12.output_Y[2]
-HEX1[3] <= mux_8x2x1:u12.output_Y[3]
-HEX1[4] <= mux_8x2x1:u12.output_Y[4]
-HEX1[5] <= mux_8x2x1:u12.output_Y[5]
-HEX1[6] <= mux_8x2x1:u12.output_Y[6]
-HEX0[0] <= mux_8x2x1:u13.output_Y[0]
-HEX0[1] <= mux_8x2x1:u13.output_Y[1]
-HEX0[2] <= mux_8x2x1:u13.output_Y[2]
-HEX0[3] <= mux_8x2x1:u13.output_Y[3]
-HEX0[4] <= mux_8x2x1:u13.output_Y[4]
-HEX0[5] <= mux_8x2x1:u13.output_Y[5]
-HEX0[6] <= mux_8x2x1:u13.output_Y[6]
+HEX1[0] <= mux_7x2x1:u12.output_Y[0]
+HEX1[1] <= mux_7x2x1:u12.output_Y[1]
+HEX1[2] <= mux_7x2x1:u12.output_Y[2]
+HEX1[3] <= mux_7x2x1:u12.output_Y[3]
+HEX1[4] <= mux_7x2x1:u12.output_Y[4]
+HEX1[5] <= mux_7x2x1:u12.output_Y[5]
+HEX1[6] <= mux_7x2x1:u12.output_Y[6]
+HEX0[0] <= mux_7x2x1:u13.output_Y[0]
+HEX0[1] <= mux_7x2x1:u13.output_Y[1]
+HEX0[2] <= mux_7x2x1:u13.output_Y[2]
+HEX0[3] <= mux_7x2x1:u13.output_Y[3]
+HEX0[4] <= mux_7x2x1:u13.output_Y[4]
+HEX0[5] <= mux_7x2x1:u13.output_Y[5]
+HEX0[6] <= mux_7x2x1:u13.output_Y[6]
 
 
 |phase3|counter_8bit:u8
@@ -215,7 +215,7 @@ hex[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
 hex[6] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|phase3|mux_8x2x1:u12
+|phase3|mux_7x2x1:u12
 sel => output_Y.OUTPUTSELECT
 sel => output_Y.OUTPUTSELECT
 sel => output_Y.OUTPUTSELECT
@@ -246,7 +246,7 @@ output_Y[5] <= output_Y.DB_MAX_OUTPUT_PORT_TYPE
 output_Y[6] <= output_Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|phase3|mux_8x2x1:u13
+|phase3|mux_7x2x1:u13
 sel => output_Y.OUTPUTSELECT
 sel => output_Y.OUTPUTSELECT
 sel => output_Y.OUTPUTSELECT
